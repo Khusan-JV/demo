@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+  width: 100vw;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Убирает горизонтальные скроллы */
+}
+.container{
+  z-index: 2;
+  height: max-content;
+}
+/* Header Style */
+/* Основные стили */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0000006d;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+/* Стиль для кнопки меню */
+/* Стили для кнопки меню */
+/* Стили для кнопки меню */
+.dropbtn {
+  border: 2px solid #00f9ff;
+  background: linear-gradient(45deg, #00f9ff, #ff00e6);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Стили при наведении на кнопку */
+.dropbtn:hover {
+  background: linear-gradient(45deg, #ff00e6, #00f9ff);
+  box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);
+}
+
+/* Стиль для выпадающего меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Скрытые ссылки в выпадающем меню */
+.dropdown-content {
+  visibility: hidden; /* Элемент скрыт по умолчанию */
+  opacity: 0; /* Изначально невидимый */
+  position: absolute;
+  background-color: #410655;
+  min-width: 160px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); /* Мягкое свечение */
+  z-index: 1;
+  border-radius: 10px;
+  transform: translateY(-10px); /* Начальная позиция чуть выше */
+  transition: visibility 0s 0.3s, opacity 0.3s ease, transform 0.3s ease; /* Плавная анимация */
+}
+
+/* Показывать меню при наведении */
+.dropdown:hover .dropdown-content {
+  visibility: visible; /* Элемент становится видимым */
+  opacity: 1; /* Меню становится непрозрачным */
+  transform: translateY(0); /* Меню опускается в нужную позицию */
+  transition: visibility 0s, opacity 0.3s ease, transform 0.3s ease; /* Без задержки на visibility */
+}
+
+/* Стили для ссылок в меню */
+.dropdown-content a {
+  color: #ffffff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #444; /* Разделение элементов */
+  border-bottom-left-radius:5px ;
+  border-bottom-right-radius:5px ;
+}
+
+/* Стили при наведении на ссылку */
+.dropdown-content a:hover {
+  border-radius: 10px;
+  font-size: 18px;
+  color: #ffffff; /* Белый текст для контраста */
+  background: linear-gradient(45deg, #6a0dad, #b804be); /* Черно-фиолетовый градиент */
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3); /* Мягкая тень для эффекта глубины */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dropbtn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .dropdown-content a {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dropbtn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .dropdown-content a {
+    padding: 8px 10px;
+  }
+}
+
+
+/* Стандартные стили кнопки */
+.btn-h {
+  border: 2px solid #00f9ff;
+  background: linear-gradient(45deg, #00f9ff, #ff00e6);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px; /* Больше отступов для удобства */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Стили для кнопки при наведении */
+.btn-h:hover {
+  background: linear-gradient(45deg, #ff00e6, #00f9ff);
+  box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .btn-h {
+      font-size: 14px; /* Уменьшаем шрифт */
+      padding: 8px 15px; /* Уменьшаем отступы */
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-h {
+      font-size: 12px; /* Еще меньше шрифт для очень маленьких экранов */
+      padding: 6px 12px; /* Уменьшаем отступы еще больше */
+  }
+}
+
+/* Border Style */
+.border {
+    height: 5px;
+    background: linear-gradient(45deg, #00f9ff, #ff00e6);
+    margin-top: 80px;
+}
+
+.content-section h1 {
+    color: #cfc8ce;
+    margin-bottom: 20px;
+}
+
+.content-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    color: #0bd5f9;
+}
+
+.present {align-items: center;
+  justify-content: center;
+    margin-top: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    width: 100%;
+}
+
+.present img {
+
+    width: 20%;
+    /* border-bottom: 1px solid white; */
+    object-fit: contain;
+}
+
+.cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+background-color: #000000;
+    cursor: pointer;
+    filter: sepia(20%);
+}
+
+/* Content Section Style */
+.content {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 120px; /* Учитываем высоту хедера */
+    overflow-y: scroll; /* Прокручиваемый контент */
+}
+
+/* Убираем скроллбар для .content */
+.content::-webkit-scrollbar {
+  display: none; /* Для Chrome, Safari, Edge */
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 0; /* Скрываем скроллбар */
+  height: 0; /* Для горизонтального скроллбар тоже */
+}
+/* Content Section */
+.content-section {padding-top: 100px;
+    width: 100%;
+    min-height: 800px;
+    border-radius: 10px;
+}
+.descr-first{
+  border-radius: 10px;
+  width: 90%;
+  background: linear-gradient(45deg, #000000, #413f3f, #616161, #9a9898);
+  height: max-content;
+  text-align: center;
+  font-size: larger;
+  color: aqua;
+}
+.hidden {
+  display: none;
+}
